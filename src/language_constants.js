@@ -65,6 +65,11 @@ export default {
         'PT': 'País',
         'EN': 'Country',
     },
+    'FORM_LOGIN': {
+        'PT': 'Entrar',
+        'EN': 'Login',
+    },
+
 
     // Texts
     'TEXT_FOOTER': {

@@ -14,6 +14,9 @@ function App() {
   return (
   <Router>
       <Switch>
+          <Route path="/panel">
+              <page.Panel />
+          </Route>
           <Route path="/login">
               <page.Login />
           </Route>

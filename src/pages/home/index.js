@@ -9,40 +9,18 @@ import logo from '../../assets/logo_horizontal.svg';
 import imageHome from '../../assets/image-home.jpg';
 
 import {
-    Toolbar,
     Container,
     Grid,
-    Select,
-    TextField,
     Button
 } from '@material-ui/core';
 
+import {
+    Toolbar,
+    ToolbarFooter,
+    Select,
+    TextField,
+} from '../../components/index';
 
-const ToolbarStyled = styled(Toolbar)`
-    background-color: #ffffff;
-    box-shadow: 0 -3px 8px rgba(0,0,0,0.75);
-`;
-
-const ToolbarFooter = styled(Toolbar)`
-    background: #0B8C75;
-    color: #ffffff;
-    span {
-        display: block;
-        width: 100%;
-        text-align: center;
-    }
-`;
-
-const SelectStyled = styled(Select)`
-    &.Mui-focused .MuiOutlinedInput-notchedOutline {
-        border-color: #08505B !important;
-    }
-`;
-
-const ButtonMenuStyled = styled(Button)`
-    color: #08505B;
-    padding: 40px 15px !important;
-`;
 
 const ButtonStyled = styled(Button)`
     background: #0B8C75 !important;
@@ -57,14 +35,13 @@ const ButtonStyled = styled(Button)`
     }
 `;
 
-const TextFieldStyled = styled(TextField)`
-    .Mui-focused {
-        color: #0B8C75 !important;
-    }
-    .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
-        border-color: #0B8C75;
-    }
+
+const ButtonMenuStyled = styled(Button)`
+    color: #08505B;
+    padding: 40px 15px !important;
 `;
+
+
 
 function Home() {
 
@@ -82,11 +59,13 @@ function Home() {
 
     return (
         <div>
-            <ToolbarStyled>
+            <Toolbar>
                 <Container>
                     <Grid container spacing={3}>
                         <Grid item md={2} sm={12}>
-                            <img src={logo} height="100"/>
+                            <a href="/">
+                                <img src={logo} alt="4SAVE" height="100" />
+                            </a>
                         </Grid>
 
                         <Grid item md={8} sm={4}>
@@ -100,7 +79,7 @@ function Home() {
                         </Grid>
 
                         <Grid item md={2} sm={4}>
-                            <SelectStyled
+                            <Select
                                 native
                                 variant="outlined"
                                 value={language}
@@ -109,11 +88,11 @@ function Home() {
                             >
                                 <option value="PT">Português</option>
                                 <option value="EN">Inglês</option>
-                            </SelectStyled>
+                            </Select>
                         </Grid>
                     </Grid>
                 </Container>
-            </ToolbarStyled>
+            </Toolbar>
 
             <Container className="main-content">
 
@@ -150,15 +129,15 @@ function Home() {
                             <h4>{translate('TEXT_RESGISTER_CONSUMER')}</h4>
                         </Grid>
                     </Grid>
-                    ): ''}
+                ): ''}
 
-                    {(page === 'provider' || page === 'consumer') ? (
+                {(page === 'provider' || page === 'consumer') ? (
                     <Grid container spacing={3} className="register-user-init">
 
                         <Grid item sm={12}>
                             {page === 'provider' ?
                                 <h2>{translate('TITLE_RESGISTER_PROVIDER')}</h2>
-                            :
+                                :
                                 <h2>{translate('TITLE_RESGISTER_CONSUMER')}</h2>}
                         </Grid>
 
@@ -168,46 +147,46 @@ function Home() {
 
                         <Grid item xs={6} sm={12}>
 
-                            <TextFieldStyled
+                            <TextField
                                 variant="outlined"
                                 fullWidth
                                 label={translate('FORM_FIRST_NAME')}
                                 className="form-join-team-field"
                             />
-                            <TextFieldStyled
+                            <TextField
                                 variant="outlined"
                                 fullWidth
                                 label={translate('FORM_LAST_NAME')}
                                 className="form-join-team-field"
                             />
-                            <TextFieldStyled
+                            <TextField
                                 variant="outlined"
                                 fullWidth
                                 label="Email"
                                 className="form-join-team-field"
                             />
 
-                            <TextFieldStyled
+                            <TextField
                                 variant="outlined"
                                 fullWidth
                                 label={translate('FORM_USERNAME')}
                                 className="form-join-team-field"
                             />
-                            <TextFieldStyled
+                            <TextField
                                 variant="outlined"
                                 fullWidth
                                 label={translate('FORM_PASSWORD')}
                                 className="form-join-team-field"
                             />
 
-                            <TextFieldStyled
+                            <TextField
                                 variant="outlined"
                                 fullWidth
                                 label={translate('FORM_ADDRESS')}
                                 className="form-join-team-field"
                             />
 
-                            <TextFieldStyled
+                            <TextField
                                 variant="outlined"
                                 fullWidth
                                 label={translate('FORM_COUNTRY')}
@@ -229,7 +208,7 @@ function Home() {
                 {page === 'home' ? (
                     <Grid container spacing={3}>
                         <Grid item md={8} sm={12}>
-                            <img src={imageHome} width="100%"/>
+                            <img src={imageHome} alt={translate('TITLE_HOME')} width="100%"/>
                         </Grid>
 
                         <Grid item md={4} sm={12}>
