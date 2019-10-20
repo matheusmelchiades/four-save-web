@@ -112,8 +112,18 @@ function Panel() {
 
                     </Grid>
 
-                    <Grid item md={4} sm={12}>
+                    <Grid item md={12} sm={12}>
+                        <h2>Bem Vindo!</h2>
+                    </Grid>
 
+                    <Grid item md={12} sm={12}>
+                        <p>
+                            {localStorage.getItem('data').name}, parabens por participar dessa iniciativa
+                        </p>
+
+                        <p>
+                            Vamos à mais algumas perguntas para melhorar sua experiência no site.
+                        </p>
                     </Grid>
 
                 </Grid>
