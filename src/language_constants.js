@@ -8,6 +8,11 @@ export default {
         'PT': 'Faça Parte',
         'EN': 'Join the team',
     },
+    'MENU_VISAO_COMUNITY': {
+        'PT': 'Visão de Comunidade',
+        'EN': 'Community View',
+    },
+
 
     // Titles
     'TITLE_HOME': {
@@ -64,6 +69,10 @@ export default {
     'FORM_COUNTRY': {
         'PT': 'País',
         'EN': 'Country',
+    },
+    'FORM_REGION': {
+        'PT': 'Estado',
+        'EN': 'Region',
     },
     'FORM_LOGIN': {
         'PT': 'Entrar',

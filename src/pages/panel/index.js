@@ -41,8 +41,13 @@ const ButtonMenuStyled = styled(Button)`
 `;
 
 
-
 function Panel() {
+
+    (() => {
+        const loginData = localStorage.getItem('data');
+        if (!loginData || loginData.logged === false)
+            return window.location.href = '/';
+    })();
 
     const [language, setLanguage] = useState(localStorage.getItem('languagePreference') || 'EN');
     const translate = field => constants[field][language];
@@ -52,6 +57,11 @@ function Panel() {
 
         localStorage.setItem('languagePreference', language);
         setLanguage(language);
+    };
+
+    const logout = () => {
+        localStorage.removeItem('data');
+        window.location.href = '/';
     };
 
     const [page, changePage] = useState('home');
@@ -97,6 +107,8 @@ function Panel() {
 
                 <Grid container spacing={3}>
                     <Grid item md={8} sm={12}>
+
+                        <Button onClick={logout}>Logout</Button>
 
                     </Grid>
 
