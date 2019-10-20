@@ -1,0 +1,15 @@
+
+.login-content {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: calc((100vh - 470px) / 2);
+    max-width: 650px !important;
+}
+
+.login-content .paper {
+    padding: 25px 15px;
+}
+
+.login-content .paper .logo {
+    margin-left: 20% !important;
+}

@@ -1,0 +1,33 @@
+.select-language {
+    width: 100% !important;
+    margin-top: 23px;
+}
+
+.main-content {
+    margin: 30px auto;
+    min-height: calc(100vh - 204px);
+}
+
+.register-user-init h3,
+.register-user-init h4 {
+    color: #666666;
+    text-align: center;
+}
+
+.footer span,
+.footer span i {
+    font-size: 15px;
+    line-height: 100%;
+}
+
+.button-join {
+    width: 100%;
+    min-height: 56px;
+}
+
+.you-are-button {
+    width: 100%;
+    min-height: 56px;
+}
+
+.form-join-team-field { margin: 7px 0 !important; }
