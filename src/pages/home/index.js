@@ -120,13 +120,13 @@ function Home() {
             <Toolbar>
                 <Container>
                     <Grid container spacing={3}>
-                        <Grid item md={2} sm={12}>
+                        <Grid item lg={2} md={3} sm={3} xs={12} className="logo">
                             <a href="/">
                                 <img src={logo} alt="4SAVE" height="100" />
                             </a>
                         </Grid>
 
-                        <Grid item md={8} sm={10}>
+                        <Grid item lg={8} md={7} sm={9} xs={12}>
                             <ButtonMenuStyled size="medium" onClick={event => changePage('home')}>
                                 {translate('MENU_MORE')}
                             </ButtonMenuStyled>
@@ -140,7 +140,8 @@ function Home() {
                             </ButtonMenuStyled>
                         </Grid>
 
-                        <Grid item md={2} sm={2}>
+
+                        <Grid item lg={2} md={2} sm={2}>
                             <Select
                                 native
                                 variant="outlined"
@@ -346,26 +347,70 @@ function Home() {
 
                 {page === 'home' ? (
                     <Grid container spacing={3}>
-                        <Grid item md={8} sm={12}>
+                        <Grid item md={7} sm={12}>
                             <img src={imageHome} alt={translate('TITLE_HOME')} width="100%"/>
                         </Grid>
 
-                        <Grid item md={4} sm={12}>
+                        <Grid item md={5} sm={12}>
                             <h2>{translate('TITLE_HOME')}</h2>
 
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries, but also the leap into
-                                electronic typesetting, remaining essentially unchanged. It was popularised in
-                                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including
-                                versions of Lorem Ipsum.
+                                Você sabia que cada ser humano junta em média de 1kg de lixo por dia?
+                                E que que a cada ano chega em 25 mil toneladas de lixo no nosso oceano?
+                                E já parou pra pensar que você pode ser um causador da poluição em nosso planeta?
+                                Temos uma boa noticia para te dar, 80% da poluição que está acontecendo no mundo todo é por má gestão.
                             </p>
+
+                            <p>
+                                Junte-se com a gente nessa causa! Entre na comunidade 4Save e faça a diferença!
+                                Acompanhe o impacto positivo que iremos causar no Mundo!
+                                Iremos te mostrar em tempo real cruzando as suas informações com os dados da NASA,
+                                assim você conseguirá gerenciar e contribuir o que você e sua comunidade estão fazendo para nosso planeta!
+                            </p>
+
+                            <p>
+                                Por isso a 4Save tem como proposito conectar LIXO A PESSOAS” e com isto o objetivo é que você nos ajude a mudar a gestão e cultura do Lixo, assim você pode ser um “influenciador” nesta causa.
+                            </p>
+
                         </Grid>
 
                         <Grid item xs={12}>
+                            <h3>Como funciona o 4save?</h3>
+
+                            <p>Iremos reunir em uma plataforma com compradores e vendedores de Lixo, você se cadastra escolhe sua categoria e começa a fazer parte dessa comunidade.</p>
+
+
+                            <strong>Categorias:</strong>
+                            <p>
+                                <b>Comprador</b>, você estará ajudando ativamente nosso planeta reciclando materiais para sua mão de obra,
+                                e o material sairá mais acessível financeiramente do que a matéria prima, tudo de forma prática e rápida de adquirir.
+                            </p>
+
+                            <p>
+                                <b>Vendedor</b>, você destinará seu lixo domestico para um futuro certo, a reciclagem, e ainda será beneficiado por estar ajudando nosso planeta!
+                                Como funciona?  Ao se cadastrar na plataforma 4save você escolhe com quais categorias você irá contribuir: lixo, espaço ou o deslocamento, a partir disto, você estará dentro de um sistema de pontuação que  irão gerar remuneração em dinheiro ou prêmios (em ciclos), cada vez que você concluir uma missão efetivada dentro da plataforma.
+
+                                <ul>
+                                    <li>Lixo: Todo lixo reciclável que você forneça, você poderá ofertar para alguém que irá reaproveita-lo. Ex.: Plástico, madeira, papel, etc; Ganhando mais pontuação por isso.</li>
+                                    <li>Espaço: Se você tem um local de armazenamento em sua casa, você poderá fazer dele um canal de recebimento dos recicláveis e ponto de recolhimento.</li>
+                                    <li>Deslocamento: Você poderá fazer o transporte do lixo de outras pessoas se já estiver no seu roteiro o percurso, ganhando mais pontuação por isso.</li></ul>
+                            </p>
+
+                            <p>
+                                <b>Gerenciamento do Planeta:</b> Através da plataforma você conseguirá visualizar o % de lixo reduzido na sua região e no mundo; e mais que isso, você conseguirá acompanhar com a NASA o que isso está reduzindo em nosso mar e o impacto positivo para nosso planeta!
+                            </p>
+
+                            <p>
+                                Na 4save você irá se conectar com pessoas, com a sua região e com pessoas do mundo todo, todos com um proposito único transformar a “nossa casa” o nosso planeta!!
+                            </p>
+
+                        </Grid>
+
+                        <Grid item xs={12}>
+
+                            <p>Vamos entrar nessa causa juntos?</p>
+                            <p>Acesse e comece agora fazer a diferença para nosso planeta!!</p>
+
                             <ButtonStyled onClick={event => changePage('faca-parte')} className="button-join">
                                 {translate('MENU_FACA_PARTE')}
                             </ButtonStyled>
@@ -380,15 +425,41 @@ function Home() {
                             <h2>{translate('MENU_VISAO_COMUNITY')}</h2>
 
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                                when an unknown printer took a galley of type and scrambled it to make a type
-                                specimen book. It has survived not only five centuries, but also the leap into
-                                electronic typesetting, remaining essentially unchanged. It was popularised in
-                                the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
-                                and more recently with desktop publishing software like Aldus PageMaker including
-                                versions of Lorem Ipsum.
+                                Com o uso do 4Save é possível visualizar o percentual de lixo reduzido por cidades, estados, países e no mundo, acompanhar junto a NASA o que isso está reduzindo de poluição em nosso mar e o impacto positivo para nosso planeta!
+                                Os dados marítimos são fornecidos pela NASA e os dados de lixo (recolhidos e reciclados) através da comunidades 4Save, os dados são compilados e através do gerenciamento temos visualizações de relatórios atualizados e completos separado por ranking com resultados das regiões x população come % de resultados positivos.
                             </p>
+
+                            <p>
+                                Você sabia que grande parte dos dados da NASA são acessiveis ao público?
+                                Você pode conferir alguns destes dados através dos links abaixo:
+
+                            <ul>
+                                <li>
+                                    Catálogo de dados tabelados:
+                                    <br />
+                                    <a href="https://data.nasa.gov/browse">
+                                        https://data.nasa.gov/browse
+                                    </a>
+                                </li>
+
+                                <li>
+                                    Dados sobre a terra: perspectiva visual
+                                    <br />
+                                    <a href="https://earthdata.nasa.gov/">
+                                        https://earthdata.nasa.gov/
+                                    </a>
+                                </li>
+
+                                <li>
+                                    Observatório terrestre sob diferentes perspectivas e fenômenos
+                                    <br />
+                                    <a href="https://neo.sci.gsfc.nasa.gov/">
+                                        https://neo.sci.gsfc.nasa.gov/
+                                    </a>
+                                </li>
+                            </ul>
+                            </p>
+
                         </Grid>
 
                         <Grid item xs={12}>

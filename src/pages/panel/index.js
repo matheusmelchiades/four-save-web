@@ -118,7 +118,7 @@ function Panel() {
 
                     <Grid item md={12} sm={12}>
                         <p>
-                            {localStorage.getItem('data').name}, parabens por participar dessa iniciativa
+                            {localStorage.getItem('data')}, parabens por participar dessa iniciativa
                         </p>
 
                         <p>

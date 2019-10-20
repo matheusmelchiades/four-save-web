@@ -9,15 +9,15 @@ export default {
         'EN': 'Join the team',
     },
     'MENU_VISAO_COMUNITY': {
-        'PT': 'Visão de Comunidade',
-        'EN': 'Community View',
+        'PT': 'Dados',
+        'EN': 'Data',
     },
 
 
     // Titles
     'TITLE_HOME': {
-        'PT': 'Título de Impacto',
-        'EN': 'Título de Impacto em inglês',
+        'PT': 'Salvando o mundo em comunidade',
+        'EN': 'Salvando o mundo em comunidade',
     },
     'TITLE_MEMBER': {
         'PT': 'Seja Membro',
